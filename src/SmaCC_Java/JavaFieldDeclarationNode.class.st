@@ -13,32 +13,38 @@ Class {
 
 { #category : #generated }
 JavaFieldDeclarationNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitFieldDeclaration: self
 ]
 
 { #category : #generated }
 JavaFieldDeclarationNode >> commas [
+
 	^ commas
 ]
 
 { #category : #generated }
 JavaFieldDeclarationNode >> commas: anOrderedCollection [
+
 	commas := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaFieldDeclarationNode >> compositeNodeVariables [
-	^ #(#variableDeclarations #modifiers)
+
+	^ #( #variableDeclarations #modifiers )
 ]
 
 { #category : #generated }
 JavaFieldDeclarationNode >> ignoredCompositeTokenVariables [
-	^ #(#commas)
+
+	^ #( #commas )
 ]
 
 { #category : #generated }
 JavaFieldDeclarationNode >> ignoredTokenVariables [
-	^ #(#semicolon)
+
+	^ #( #semicolon )
 ]
 
 { #category : #'generated-initialize-release' }
@@ -51,11 +57,13 @@ JavaFieldDeclarationNode >> initialize [
 
 { #category : #generated }
 JavaFieldDeclarationNode >> modifiers [
+
 	^ modifiers
 ]
 
 { #category : #generated }
 JavaFieldDeclarationNode >> modifiers: anOrderedCollection [
+
 	self setParents: self modifiers to: nil.
 	modifiers := anOrderedCollection.
 	self setParents: self modifiers to: self
@@ -63,40 +71,45 @@ JavaFieldDeclarationNode >> modifiers: anOrderedCollection [
 
 { #category : #generated }
 JavaFieldDeclarationNode >> nodeVariables [
-	^ #(#type)
+
+	^ #( #type )
 ]
 
 { #category : #generated }
 JavaFieldDeclarationNode >> semicolon [
+
 	^ semicolon
 ]
 
 { #category : #generated }
 JavaFieldDeclarationNode >> semicolon: aSmaCCToken [
+
 	semicolon := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaFieldDeclarationNode >> type [
+
 	^ type
 ]
 
 { #category : #generated }
 JavaFieldDeclarationNode >> type: aJavaTypeNode [
-	self type notNil
-		ifTrue: [ self type parent: nil ].
+
+	self type notNil ifTrue: [ self type parent: nil ].
 	type := aJavaTypeNode.
-	self type notNil
-		ifTrue: [ self type parent: self ]
+	self type notNil ifTrue: [ self type parent: self ]
 ]
 
 { #category : #generated }
 JavaFieldDeclarationNode >> variableDeclarations [
+
 	^ variableDeclarations
 ]
 
 { #category : #generated }
 JavaFieldDeclarationNode >> variableDeclarations: anOrderedCollection [
+
 	self setParents: self variableDeclarations to: nil.
 	variableDeclarations := anOrderedCollection.
 	self setParents: self variableDeclarations to: self

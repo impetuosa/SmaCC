@@ -12,32 +12,38 @@ Class {
 
 { #category : #generated }
 JavaArrayInitializerNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitArrayInitializer: self
 ]
 
 { #category : #generated }
 JavaArrayInitializerNode >> commas [
+
 	^ commas
 ]
 
 { #category : #generated }
 JavaArrayInitializerNode >> commas: anOrderedCollection [
+
 	commas := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaArrayInitializerNode >> compositeNodeVariables [
-	^ #(#initializers)
+
+	^ #( #initializers )
 ]
 
 { #category : #generated }
 JavaArrayInitializerNode >> ignoredCompositeTokenVariables [
-	^ #(#commas)
+
+	^ #( #commas )
 ]
 
 { #category : #generated }
 JavaArrayInitializerNode >> ignoredTokenVariables [
-	^ #(#leftBrace #rightBrace)
+
+	^ #( #leftBrace #rightBrace )
 ]
 
 { #category : #'generated-initialize-release' }
@@ -49,11 +55,13 @@ JavaArrayInitializerNode >> initialize [
 
 { #category : #generated }
 JavaArrayInitializerNode >> initializers [
+
 	^ initializers
 ]
 
 { #category : #generated }
 JavaArrayInitializerNode >> initializers: anOrderedCollection [
+
 	self setParents: self initializers to: nil.
 	initializers := anOrderedCollection.
 	self setParents: self initializers to: self
@@ -61,20 +69,24 @@ JavaArrayInitializerNode >> initializers: anOrderedCollection [
 
 { #category : #generated }
 JavaArrayInitializerNode >> leftBrace [
+
 	^ leftBrace
 ]
 
 { #category : #generated }
 JavaArrayInitializerNode >> leftBrace: aSmaCCToken [
+
 	leftBrace := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaArrayInitializerNode >> rightBrace [
+
 	^ rightBrace
 ]
 
 { #category : #generated }
 JavaArrayInitializerNode >> rightBrace: aSmaCCToken [
+
 	rightBrace := aSmaCCToken
 ]

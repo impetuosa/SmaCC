@@ -10,30 +10,36 @@ Class {
 
 { #category : #generated }
 JavaDefaultLabelNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitDefaultLabel: self
 ]
 
 { #category : #generated }
 JavaDefaultLabelNode >> colon [
+
 	^ colon
 ]
 
 { #category : #generated }
 JavaDefaultLabelNode >> colon: aSmaCCToken [
+
 	colon := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaDefaultLabelNode >> defaultToken [
+
 	^ defaultToken
 ]
 
 { #category : #generated }
 JavaDefaultLabelNode >> defaultToken: aSmaCCToken [
+
 	defaultToken := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaDefaultLabelNode >> tokenVariables [
-	^ #(#defaultToken #colon)
+
+	^ #( #defaultToken #colon )
 ]

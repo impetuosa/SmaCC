@@ -16,30 +16,33 @@ Class {
 
 { #category : #generated }
 JavaTryStatementNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitTryStatement: self
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> block [
+
 	^ block
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> block: aJavaBlockNode [
-	self block notNil
-		ifTrue: [ self block parent: nil ].
+
+	self block notNil ifTrue: [ self block parent: nil ].
 	block := aJavaBlockNode.
-	self block notNil
-		ifTrue: [ self block parent: self ]
+	self block notNil ifTrue: [ self block parent: self ]
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> catches [
+
 	^ catches
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> catches: anOrderedCollection [
+
 	self setParents: self catches to: nil.
 	catches := anOrderedCollection.
 	self setParents: self catches to: self
@@ -47,31 +50,34 @@ JavaTryStatementNode >> catches: anOrderedCollection [
 
 { #category : #generated }
 JavaTryStatementNode >> compositeNodeVariables [
-	^ #(#catches #resources)
+
+	^ #( #catches #resources )
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> finally [
+
 	^ finally
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> finally: aJavaFinallyClauseNode [
-	self finally notNil
-		ifTrue: [ self finally parent: nil ].
+
+	self finally notNil ifTrue: [ self finally parent: nil ].
 	finally := aJavaFinallyClauseNode.
-	self finally notNil
-		ifTrue: [ self finally parent: self ]
+	self finally notNil ifTrue: [ self finally parent: self ]
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> ignoredCompositeTokenVariables [
-	^ #(#semicolons)
+
+	^ #( #semicolons )
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> ignoredTokenVariables [
-	^ #(#leftParen #rightParen)
+
+	^ #( #leftParen #rightParen )
 ]
 
 { #category : #'generated-initialize-release' }
@@ -84,26 +90,31 @@ JavaTryStatementNode >> initialize [
 
 { #category : #generated }
 JavaTryStatementNode >> leftParen [
+
 	^ leftParen
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> leftParen: aSmaCCToken [
+
 	leftParen := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> nodeVariables [
-	^ #(#block #finally)
+
+	^ #( #block #finally )
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> resources [
+
 	^ resources
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> resources: anOrderedCollection [
+
 	self setParents: self resources to: nil.
 	resources := anOrderedCollection.
 	self setParents: self resources to: self
@@ -111,35 +122,42 @@ JavaTryStatementNode >> resources: anOrderedCollection [
 
 { #category : #generated }
 JavaTryStatementNode >> rightParen [
+
 	^ rightParen
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> rightParen: aSmaCCToken [
+
 	rightParen := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> semicolons [
+
 	^ semicolons
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> semicolons: anOrderedCollection [
+
 	semicolons := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> tokenVariables [
-	^ #(#tryToken)
+
+	^ #( #tryToken )
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> tryToken [
+
 	^ tryToken
 ]
 
 { #category : #generated }
 JavaTryStatementNode >> tryToken: aSmaCCToken [
+
 	tryToken := aSmaCCToken
 ]

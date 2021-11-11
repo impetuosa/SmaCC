@@ -10,39 +10,44 @@ Class {
 
 { #category : #generated }
 JavaLocalVariableDeclarationStatementNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitLocalVariableDeclarationStatement: self
 ]
 
 { #category : #generated }
 JavaLocalVariableDeclarationStatementNode >> declaration [
+
 	^ declaration
 ]
 
 { #category : #generated }
 JavaLocalVariableDeclarationStatementNode >> declaration: aJavaLocalVariableDeclarationNode [
-	self declaration notNil
-		ifTrue: [ self declaration parent: nil ].
+
+	self declaration notNil ifTrue: [ self declaration parent: nil ].
 	declaration := aJavaLocalVariableDeclarationNode.
-	self declaration notNil
-		ifTrue: [ self declaration parent: self ]
+	self declaration notNil ifTrue: [ self declaration parent: self ]
 ]
 
 { #category : #generated }
 JavaLocalVariableDeclarationStatementNode >> ignoredTokenVariables [
-	^ #(#semicolon)
+
+	^ #( #semicolon )
 ]
 
 { #category : #generated }
 JavaLocalVariableDeclarationStatementNode >> nodeVariables [
-	^ #(#declaration)
+
+	^ #( #declaration )
 ]
 
 { #category : #generated }
 JavaLocalVariableDeclarationStatementNode >> semicolon [
+
 	^ semicolon
 ]
 
 { #category : #generated }
 JavaLocalVariableDeclarationStatementNode >> semicolon: aSmaCCToken [
+
 	semicolon := aSmaCCToken
 ]

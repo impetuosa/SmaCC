@@ -13,78 +13,91 @@ Class {
 
 { #category : #generated }
 JavaAssertStatementNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitAssertStatement: self
 ]
 
 { #category : #generated }
 JavaAssertStatementNode >> assertToken [
+
 	^ assertToken
 ]
 
 { #category : #generated }
 JavaAssertStatementNode >> assertToken: aSmaCCToken [
+
 	assertToken := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaAssertStatementNode >> colon [
+
 	^ colon
 ]
 
 { #category : #generated }
 JavaAssertStatementNode >> colon: aSmaCCToken [
+
 	colon := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaAssertStatementNode >> ignoredTokenVariables [
-	^ #(#semicolon)
+
+	^ #( #semicolon )
 ]
 
 { #category : #generated }
 JavaAssertStatementNode >> messageExpression [
+
 	^ messageExpression
 ]
 
 { #category : #generated }
 JavaAssertStatementNode >> messageExpression: aJavaExpressionNode [
-	self messageExpression notNil
-		ifTrue: [ self messageExpression parent: nil ].
+
+	self messageExpression notNil ifTrue: [ 
+		self messageExpression parent: nil ].
 	messageExpression := aJavaExpressionNode.
-	self messageExpression notNil
-		ifTrue: [ self messageExpression parent: self ]
+	self messageExpression notNil ifTrue: [ 
+		self messageExpression parent: self ]
 ]
 
 { #category : #generated }
 JavaAssertStatementNode >> nodeVariables [
-	^ #(#testExpression #messageExpression)
+
+	^ #( #testExpression #messageExpression )
 ]
 
 { #category : #generated }
 JavaAssertStatementNode >> semicolon [
+
 	^ semicolon
 ]
 
 { #category : #generated }
 JavaAssertStatementNode >> semicolon: aSmaCCToken [
+
 	semicolon := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaAssertStatementNode >> testExpression [
+
 	^ testExpression
 ]
 
 { #category : #generated }
 JavaAssertStatementNode >> testExpression: aJavaExpressionNode [
-	self testExpression notNil
-		ifTrue: [ self testExpression parent: nil ].
+
+	self testExpression notNil ifTrue: [ self testExpression parent: nil ].
 	testExpression := aJavaExpressionNode.
-	self testExpression notNil
-		ifTrue: [ self testExpression parent: self ]
+	self testExpression notNil ifTrue: [ 
+		self testExpression parent: self ]
 ]
 
 { #category : #generated }
 JavaAssertStatementNode >> tokenVariables [
-	^ #(#assertToken #colon)
+
+	^ #( #assertToken #colon )
 ]

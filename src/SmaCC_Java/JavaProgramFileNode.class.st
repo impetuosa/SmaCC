@@ -11,21 +11,25 @@ Class {
 
 { #category : #generated }
 JavaProgramFileNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitProgramFile: self
 ]
 
 { #category : #generated }
 JavaProgramFileNode >> compositeNodeVariables [
-	^ #(#typeDeclarations #imports)
+
+	^ #( #typeDeclarations #imports )
 ]
 
 { #category : #generated }
 JavaProgramFileNode >> imports [
+
 	^ imports
 ]
 
 { #category : #generated }
 JavaProgramFileNode >> imports: anOrderedCollection [
+
 	self setParents: self imports to: nil.
 	imports := anOrderedCollection.
 	self setParents: self imports to: self
@@ -40,30 +44,35 @@ JavaProgramFileNode >> initialize [
 
 { #category : #generated }
 JavaProgramFileNode >> nodeVariables [
-	^ #(#packageDeclaration)
+
+	^ #( #packageDeclaration )
 ]
 
 { #category : #generated }
 JavaProgramFileNode >> packageDeclaration [
+
 	^ packageDeclaration
 ]
 
 { #category : #generated }
 JavaProgramFileNode >> packageDeclaration: aJavaPackageDeclarationNode [
-	self packageDeclaration notNil
-		ifTrue: [ self packageDeclaration parent: nil ].
+
+	self packageDeclaration notNil ifTrue: [ 
+		self packageDeclaration parent: nil ].
 	packageDeclaration := aJavaPackageDeclarationNode.
-	self packageDeclaration notNil
-		ifTrue: [ self packageDeclaration parent: self ]
+	self packageDeclaration notNil ifTrue: [ 
+		self packageDeclaration parent: self ]
 ]
 
 { #category : #generated }
 JavaProgramFileNode >> typeDeclarations [
+
 	^ typeDeclarations
 ]
 
 { #category : #generated }
 JavaProgramFileNode >> typeDeclarations: anOrderedCollection [
+
 	self setParents: self typeDeclarations to: nil.
 	typeDeclarations := anOrderedCollection.
 	self setParents: self typeDeclarations to: self

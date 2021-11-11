@@ -18,31 +18,37 @@ Class {
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitInterfaceDeclaration: self
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> commas [
+
 	^ commas
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> commas: anOrderedCollection [
+
 	commas := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> compositeNodeVariables [
-	^ #(#declarations #interfaceTypes #modifiers)
+
+	^ #( #declarations #interfaceTypes #modifiers )
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> declarations [
+
 	^ declarations
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> declarations: anOrderedCollection [
+
 	self setParents: self declarations to: nil.
 	declarations := anOrderedCollection.
 	self setParents: self declarations to: self
@@ -50,22 +56,26 @@ JavaInterfaceDeclarationNode >> declarations: anOrderedCollection [
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> extendsToken [
+
 	^ extendsToken
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> extendsToken: aSmaCCToken [
+
 	extendsToken := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> ignoredCompositeTokenVariables [
-	^ #(#commas)
+
+	^ #( #commas )
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> ignoredTokenVariables [
-	^ #(#leftBrace #rightBrace)
+
+	^ #( #leftBrace #rightBrace )
 ]
 
 { #category : #'generated-initialize-release' }
@@ -79,21 +89,25 @@ JavaInterfaceDeclarationNode >> initialize [
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> interfaceToken [
+
 	^ interfaceToken
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> interfaceToken: aSmaCCToken [
+
 	interfaceToken := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> interfaceTypes [
+
 	^ interfaceTypes
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> interfaceTypes: anOrderedCollection [
+
 	self setParents: self interfaceTypes to: nil.
 	interfaceTypes := anOrderedCollection.
 	self setParents: self interfaceTypes to: self
@@ -101,21 +115,25 @@ JavaInterfaceDeclarationNode >> interfaceTypes: anOrderedCollection [
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> leftBrace [
+
 	^ leftBrace
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> leftBrace: aSmaCCToken [
+
 	leftBrace := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> modifiers [
+
 	^ modifiers
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> modifiers: anOrderedCollection [
+
 	self setParents: self modifiers to: nil.
 	modifiers := anOrderedCollection.
 	self setParents: self modifiers to: self
@@ -123,44 +141,53 @@ JavaInterfaceDeclarationNode >> modifiers: anOrderedCollection [
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> name [
+
 	^ name
 ]
 
 { #category : #generated }
-JavaInterfaceDeclarationNode >> name: aSmaCCToken [
-	name := aSmaCCToken
+JavaInterfaceDeclarationNode >> name: aJavaClassTypeNode [
+
+	self name notNil ifTrue: [ self name parent: nil ].
+	name := aJavaClassTypeNode.
+	self name notNil ifTrue: [ self name parent: self ]
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> nodeVariables [
-	^ #(#typeParameters)
+
+	^ #( #name #typeParameters )
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> rightBrace [
+
 	^ rightBrace
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> rightBrace: aSmaCCToken [
+
 	rightBrace := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> tokenVariables [
-	^ #(#interfaceToken #name #extendsToken)
+
+	^ #( #interfaceToken #extendsToken )
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> typeParameters [
+
 	^ typeParameters
 ]
 
 { #category : #generated }
 JavaInterfaceDeclarationNode >> typeParameters: aJavaTypeParametersNode [
-	self typeParameters notNil
-		ifTrue: [ self typeParameters parent: nil ].
+
+	self typeParameters notNil ifTrue: [ self typeParameters parent: nil ].
 	typeParameters := aJavaTypeParametersNode.
-	self typeParameters notNil
-		ifTrue: [ self typeParameters parent: self ]
+	self typeParameters notNil ifTrue: [ 
+		self typeParameters parent: self ]
 ]

@@ -11,49 +11,56 @@ Class {
 
 { #category : #generated }
 JavaDimensionExpressionNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitDimensionExpression: self
 ]
 
 { #category : #generated }
 JavaDimensionExpressionNode >> expression [
+
 	^ expression
 ]
 
 { #category : #generated }
 JavaDimensionExpressionNode >> expression: aJavaExpressionNode [
-	self expression notNil
-		ifTrue: [ self expression parent: nil ].
+
+	self expression notNil ifTrue: [ self expression parent: nil ].
 	expression := aJavaExpressionNode.
-	self expression notNil
-		ifTrue: [ self expression parent: self ]
+	self expression notNil ifTrue: [ self expression parent: self ]
 ]
 
 { #category : #generated }
 JavaDimensionExpressionNode >> ignoredTokenVariables [
-	^ #(#leftBracket #rightBracket)
+
+	^ #( #leftBracket #rightBracket )
 ]
 
 { #category : #generated }
 JavaDimensionExpressionNode >> leftBracket [
+
 	^ leftBracket
 ]
 
 { #category : #generated }
 JavaDimensionExpressionNode >> leftBracket: aSmaCCToken [
+
 	leftBracket := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaDimensionExpressionNode >> nodeVariables [
-	^ #(#expression)
+
+	^ #( #expression )
 ]
 
 { #category : #generated }
 JavaDimensionExpressionNode >> rightBracket [
+
 	^ rightBracket
 ]
 
 { #category : #generated }
 JavaDimensionExpressionNode >> rightBracket: aSmaCCToken [
+
 	rightBracket := aSmaCCToken
 ]

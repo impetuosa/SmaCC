@@ -11,26 +11,28 @@ Class {
 
 { #category : #generated }
 JavaArrayTypeNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitArrayType: self
 ]
 
 { #category : #generated }
 JavaArrayTypeNode >> baseType [
+
 	^ baseType
 ]
 
 { #category : #generated }
 JavaArrayTypeNode >> baseType: aJavaProgramNode [
-	self baseType notNil
-		ifTrue: [ self baseType parent: nil ].
+
+	self baseType notNil ifTrue: [ self baseType parent: nil ].
 	baseType := aJavaProgramNode.
-	self baseType notNil
-		ifTrue: [ self baseType parent: self ]
+	self baseType notNil ifTrue: [ self baseType parent: self ]
 ]
 
 { #category : #generated }
 JavaArrayTypeNode >> ignoredCompositeTokenVariables [
-	^ #(#leftBrackets #rightBrackets)
+
+	^ #( #leftBrackets #rightBrackets )
 ]
 
 { #category : #'generated-initialize-release' }
@@ -42,25 +44,30 @@ JavaArrayTypeNode >> initialize [
 
 { #category : #generated }
 JavaArrayTypeNode >> leftBrackets [
+
 	^ leftBrackets
 ]
 
 { #category : #generated }
 JavaArrayTypeNode >> leftBrackets: anOrderedCollection [
+
 	leftBrackets := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaArrayTypeNode >> nodeVariables [
-	^ #(#baseType)
+
+	^ #( #baseType )
 ]
 
 { #category : #generated }
 JavaArrayTypeNode >> rightBrackets [
+
 	^ rightBrackets
 ]
 
 { #category : #generated }
 JavaArrayTypeNode >> rightBrackets: anOrderedCollection [
+
 	rightBrackets := anOrderedCollection
 ]

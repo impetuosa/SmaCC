@@ -6,5 +6,6 @@ Class {
 
 { #category : #generated }
 JavaFloatLiteralNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitFloatLiteral: self
 ]

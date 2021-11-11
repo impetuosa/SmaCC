@@ -6,5 +6,6 @@ Class {
 
 { #category : #generated }
 JavaByteTypeNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitByteType: self
 ]

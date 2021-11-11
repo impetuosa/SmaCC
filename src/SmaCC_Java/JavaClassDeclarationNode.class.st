@@ -20,41 +20,49 @@ Class {
 
 { #category : #generated }
 JavaClassDeclarationNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitClassDeclaration: self
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> classToken [
+
 	^ classToken
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> classToken: aSmaCCToken [
+
 	classToken := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> commas [
+
 	^ commas
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> commas: anOrderedCollection [
+
 	commas := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> compositeNodeVariables [
-	^ #(#declarations #interfaces #modifiers)
+
+	^ #( #declarations #interfaces #modifiers )
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> declarations [
+
 	^ declarations
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> declarations: anOrderedCollection [
+
 	self setParents: self declarations to: nil.
 	declarations := anOrderedCollection.
 	self setParents: self declarations to: self
@@ -62,31 +70,37 @@ JavaClassDeclarationNode >> declarations: anOrderedCollection [
 
 { #category : #generated }
 JavaClassDeclarationNode >> extendsToken [
+
 	^ extendsToken
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> extendsToken: aSmaCCToken [
+
 	extendsToken := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> ignoredCompositeTokenVariables [
-	^ #(#commas)
+
+	^ #( #commas )
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> ignoredTokenVariables [
-	^ #(#leftBrace #rightBrace)
+
+	^ #( #leftBrace #rightBrace )
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> implementsToken [
+
 	^ implementsToken
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> implementsToken: aSmaCCToken [
+
 	implementsToken := aSmaCCToken
 ]
 
@@ -101,11 +115,13 @@ JavaClassDeclarationNode >> initialize [
 
 { #category : #generated }
 JavaClassDeclarationNode >> interfaces [
+
 	^ interfaces
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> interfaces: anOrderedCollection [
+
 	self setParents: self interfaces to: nil.
 	interfaces := anOrderedCollection.
 	self setParents: self interfaces to: self
@@ -113,21 +129,25 @@ JavaClassDeclarationNode >> interfaces: anOrderedCollection [
 
 { #category : #generated }
 JavaClassDeclarationNode >> leftBrace [
+
 	^ leftBrace
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> leftBrace: aSmaCCToken [
+
 	leftBrace := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> modifiers [
+
 	^ modifiers
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> modifiers: anOrderedCollection [
+
 	self setParents: self modifiers to: nil.
 	modifiers := anOrderedCollection.
 	self setParents: self modifiers to: self
@@ -135,58 +155,67 @@ JavaClassDeclarationNode >> modifiers: anOrderedCollection [
 
 { #category : #generated }
 JavaClassDeclarationNode >> name [
+
 	^ name
 ]
 
 { #category : #generated }
-JavaClassDeclarationNode >> name: aSmaCCToken [
-	name := aSmaCCToken
+JavaClassDeclarationNode >> name: aJavaClassTypeNode [
+
+	self name notNil ifTrue: [ self name parent: nil ].
+	name := aJavaClassTypeNode.
+	self name notNil ifTrue: [ self name parent: self ]
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> nodeVariables [
-	^ #(#typeParameters #superclass)
+
+	^ #( #name #typeParameters #superclass )
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> rightBrace [
+
 	^ rightBrace
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> rightBrace: aSmaCCToken [
+
 	rightBrace := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> superclass [
+
 	^ superclass
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> superclass: aJavaClassTypeNode [
-	self superclass notNil
-		ifTrue: [ self superclass parent: nil ].
+
+	self superclass notNil ifTrue: [ self superclass parent: nil ].
 	superclass := aJavaClassTypeNode.
-	self superclass notNil
-		ifTrue: [ self superclass parent: self ]
+	self superclass notNil ifTrue: [ self superclass parent: self ]
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> tokenVariables [
-	^ #(#classToken #name #implementsToken #extendsToken)
+
+	^ #( #classToken #implementsToken #extendsToken )
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> typeParameters [
+
 	^ typeParameters
 ]
 
 { #category : #generated }
 JavaClassDeclarationNode >> typeParameters: aJavaTypeParametersNode [
-	self typeParameters notNil
-		ifTrue: [ self typeParameters parent: nil ].
+
+	self typeParameters notNil ifTrue: [ self typeParameters parent: nil ].
 	typeParameters := aJavaTypeParametersNode.
-	self typeParameters notNil
-		ifTrue: [ self typeParameters parent: self ]
+	self typeParameters notNil ifTrue: [ 
+		self typeParameters parent: self ]
 ]

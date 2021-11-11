@@ -14,21 +14,25 @@ Class {
 
 { #category : #generated }
 JavaNewArrayNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitNewArray: self
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> compositeNodeVariables [
-	^ #(#dimExpressions)
+
+	^ #( #dimExpressions )
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> dimExpressions [
+
 	^ dimExpressions
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> dimExpressions: anOrderedCollection [
+
 	self setParents: self dimExpressions to: nil.
 	dimExpressions := anOrderedCollection.
 	self setParents: self dimExpressions to: self
@@ -36,7 +40,8 @@ JavaNewArrayNode >> dimExpressions: anOrderedCollection [
 
 { #category : #generated }
 JavaNewArrayNode >> ignoredCompositeTokenVariables [
-	^ #(#leftBrackets #rightBrackets #_leftParens #_rightParens)
+
+	^ #( #leftBrackets #rightBrackets #_leftParens #_rightParens )
 ]
 
 { #category : #'generated-initialize-release' }
@@ -49,68 +54,76 @@ JavaNewArrayNode >> initialize [
 
 { #category : #generated }
 JavaNewArrayNode >> initializer [
+
 	^ initializer
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> initializer: aJavaArrayInitializerNode [
-	self initializer notNil
-		ifTrue: [ self initializer parent: nil ].
+
+	self initializer notNil ifTrue: [ self initializer parent: nil ].
 	initializer := aJavaArrayInitializerNode.
-	self initializer notNil
-		ifTrue: [ self initializer parent: self ]
+	self initializer notNil ifTrue: [ self initializer parent: self ]
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> leftBrackets [
+
 	^ leftBrackets
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> leftBrackets: anOrderedCollection [
+
 	leftBrackets := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> newToken [
+
 	^ newToken
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> newToken: aSmaCCToken [
+
 	newToken := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> nodeVariables [
-	^ #(#type #initializer)
+
+	^ #( #type #initializer )
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> rightBrackets [
+
 	^ rightBrackets
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> rightBrackets: anOrderedCollection [
+
 	rightBrackets := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> tokenVariables [
-	^ #(#newToken)
+
+	^ #( #newToken )
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> type [
+
 	^ type
 ]
 
 { #category : #generated }
 JavaNewArrayNode >> type: aJavaTypeNode [
-	self type notNil
-		ifTrue: [ self type parent: nil ].
+
+	self type notNil ifTrue: [ self type parent: nil ].
 	type := aJavaTypeNode.
-	self type notNil
-		ifTrue: [ self type parent: self ]
+	self type notNil ifTrue: [ self type parent: self ]
 ]

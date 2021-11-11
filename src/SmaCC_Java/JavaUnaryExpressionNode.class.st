@@ -9,24 +9,26 @@ Class {
 
 { #category : #generated }
 JavaUnaryExpressionNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitUnaryExpression: self
 ]
 
 { #category : #generated }
 JavaUnaryExpressionNode >> expression [
+
 	^ expression
 ]
 
 { #category : #generated }
 JavaUnaryExpressionNode >> expression: aJavaExpressionNode [
-	self expression notNil
-		ifTrue: [ self expression parent: nil ].
+
+	self expression notNil ifTrue: [ self expression parent: nil ].
 	expression := aJavaExpressionNode.
-	self expression notNil
-		ifTrue: [ self expression parent: self ]
+	self expression notNil ifTrue: [ self expression parent: self ]
 ]
 
 { #category : #generated }
 JavaUnaryExpressionNode >> nodeVariables [
-	^ #(#expression)
+
+	^ #( #expression )
 ]

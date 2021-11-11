@@ -12,36 +12,43 @@ Class {
 
 { #category : #generated }
 JavaTypeParameterNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitTypeParameter: self
 ]
 
 { #category : #generated }
 JavaTypeParameterNode >> amps [
+
 	^ amps
 ]
 
 { #category : #generated }
 JavaTypeParameterNode >> amps: anOrderedCollection [
+
 	amps := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaTypeParameterNode >> compositeNodeVariables [
-	^ #(#types)
+
+	^ #( #types )
 ]
 
 { #category : #generated }
 JavaTypeParameterNode >> compositeTokenVariables [
-	^ #(#amps)
+
+	^ #( #amps )
 ]
 
 { #category : #generated }
 JavaTypeParameterNode >> extendsToken [
+
 	^ extendsToken
 ]
 
 { #category : #generated }
 JavaTypeParameterNode >> extendsToken: aSmaCCToken [
+
 	extendsToken := aSmaCCToken
 ]
 
@@ -54,26 +61,31 @@ JavaTypeParameterNode >> initialize [
 
 { #category : #generated }
 JavaTypeParameterNode >> name [
+
 	^ name
 ]
 
 { #category : #generated }
 JavaTypeParameterNode >> name: aSmaCCToken [
+
 	name := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaTypeParameterNode >> tokenVariables [
-	^ #(#name #extendsToken)
+
+	^ #( #name #extendsToken )
 ]
 
 { #category : #generated }
 JavaTypeParameterNode >> types [
+
 	^ types
 ]
 
 { #category : #generated }
 JavaTypeParameterNode >> types: anOrderedCollection [
+
 	self setParents: self types to: nil.
 	types := anOrderedCollection.
 	self setParents: self types to: self

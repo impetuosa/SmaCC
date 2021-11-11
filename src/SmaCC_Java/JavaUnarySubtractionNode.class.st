@@ -9,20 +9,24 @@ Class {
 
 { #category : #generated }
 JavaUnarySubtractionNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitUnarySubtraction: self
 ]
 
 { #category : #generated }
 JavaUnarySubtractionNode >> minus [
+
 	^ minus
 ]
 
 { #category : #generated }
 JavaUnarySubtractionNode >> minus: aSmaCCToken [
+
 	minus := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaUnarySubtractionNode >> tokenVariables [
-	^ #(#minus)
+
+	^ #( #minus )
 ]

@@ -6,5 +6,6 @@ Class {
 
 { #category : #generated }
 JavaDoubleTypeNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitDoubleType: self
 ]
