@@ -14,40 +14,42 @@ Class {
 
 { #category : #generated }
 JavaMethodDeclarationNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitMethodDeclaration: self
 ]
 
 { #category : #generated }
 JavaMethodDeclarationNode >> body [
+
 	^ body
 ]
 
 { #category : #generated }
 JavaMethodDeclarationNode >> body: aJavaProgramNode [
-	self body notNil
-		ifTrue: [ self body parent: nil ].
+
+	self body notNil ifTrue: [ self body parent: nil ].
 	body := aJavaProgramNode.
-	self body notNil
-		ifTrue: [ self body parent: self ]
+	self body notNil ifTrue: [ self body parent: self ]
 ]
 
 { #category : #generated }
 JavaMethodDeclarationNode >> compositeNodeVariables [
-	^ #(#modifiers)
+
+	^ #( #modifiers )
 ]
 
 { #category : #generated }
 JavaMethodDeclarationNode >> declarator [
+
 	^ declarator
 ]
 
 { #category : #generated }
 JavaMethodDeclarationNode >> declarator: aJavaProgramNode [
-	self declarator notNil
-		ifTrue: [ self declarator parent: nil ].
+
+	self declarator notNil ifTrue: [ self declarator parent: nil ].
 	declarator := aJavaProgramNode.
-	self declarator notNil
-		ifTrue: [ self declarator parent: self ]
+	self declarator notNil ifTrue: [ self declarator parent: self ]
 ]
 
 { #category : #'generated-initialize-release' }
@@ -58,11 +60,13 @@ JavaMethodDeclarationNode >> initialize [
 
 { #category : #generated }
 JavaMethodDeclarationNode >> modifiers [
+
 	^ modifiers
 ]
 
 { #category : #generated }
 JavaMethodDeclarationNode >> modifiers: anOrderedCollection [
+
 	self setParents: self modifiers to: nil.
 	modifiers := anOrderedCollection.
 	self setParents: self modifiers to: self
@@ -70,47 +74,49 @@ JavaMethodDeclarationNode >> modifiers: anOrderedCollection [
 
 { #category : #generated }
 JavaMethodDeclarationNode >> nodeVariables [
-	^ #(#typeParameters #type #declarator #throws #body)
+
+	^ #( #typeParameters #type #declarator #throws #body )
 ]
 
 { #category : #generated }
 JavaMethodDeclarationNode >> throws [
+
 	^ throws
 ]
 
 { #category : #generated }
 JavaMethodDeclarationNode >> throws: aJavaThrowsNode [
-	self throws notNil
-		ifTrue: [ self throws parent: nil ].
+
+	self throws notNil ifTrue: [ self throws parent: nil ].
 	throws := aJavaThrowsNode.
-	self throws notNil
-		ifTrue: [ self throws parent: self ]
+	self throws notNil ifTrue: [ self throws parent: self ]
 ]
 
 { #category : #generated }
 JavaMethodDeclarationNode >> type [
+
 	^ type
 ]
 
 { #category : #generated }
 JavaMethodDeclarationNode >> type: aJavaProgramNode [
-	self type notNil
-		ifTrue: [ self type parent: nil ].
+
+	self type notNil ifTrue: [ self type parent: nil ].
 	type := aJavaProgramNode.
-	self type notNil
-		ifTrue: [ self type parent: self ]
+	self type notNil ifTrue: [ self type parent: self ]
 ]
 
 { #category : #generated }
 JavaMethodDeclarationNode >> typeParameters [
+
 	^ typeParameters
 ]
 
 { #category : #generated }
 JavaMethodDeclarationNode >> typeParameters: aJavaTypeParametersNode [
-	self typeParameters notNil
-		ifTrue: [ self typeParameters parent: nil ].
+
+	self typeParameters notNil ifTrue: [ self typeParameters parent: nil ].
 	typeParameters := aJavaTypeParametersNode.
-	self typeParameters notNil
-		ifTrue: [ self typeParameters parent: self ]
+	self typeParameters notNil ifTrue: [ 
+		self typeParameters parent: self ]
 ]

@@ -12,27 +12,32 @@ Class {
 
 { #category : #generated }
 JavaCatchParameterNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitCatchParameter: self
 ]
 
 { #category : #generated }
 JavaCatchParameterNode >> bars [
+
 	^ bars
 ]
 
 { #category : #generated }
 JavaCatchParameterNode >> bars: anOrderedCollection [
+
 	bars := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaCatchParameterNode >> compositeNodeVariables [
-	^ #(#modifiers #types)
+
+	^ #( #modifiers #types )
 ]
 
 { #category : #generated }
 JavaCatchParameterNode >> compositeTokenVariables [
-	^ #(#bars)
+
+	^ #( #bars )
 ]
 
 { #category : #'generated-initialize-release' }
@@ -45,11 +50,13 @@ JavaCatchParameterNode >> initialize [
 
 { #category : #generated }
 JavaCatchParameterNode >> modifiers [
+
 	^ modifiers
 ]
 
 { #category : #generated }
 JavaCatchParameterNode >> modifiers: anOrderedCollection [
+
 	self setParents: self modifiers to: nil.
 	modifiers := anOrderedCollection.
 	self setParents: self modifiers to: self
@@ -57,16 +64,19 @@ JavaCatchParameterNode >> modifiers: anOrderedCollection [
 
 { #category : #generated }
 JavaCatchParameterNode >> nodeVariables [
-	^ #(#variable)
+
+	^ #( #variable )
 ]
 
 { #category : #generated }
 JavaCatchParameterNode >> types [
+
 	^ types
 ]
 
 { #category : #generated }
 JavaCatchParameterNode >> types: anOrderedCollection [
+
 	self setParents: self types to: nil.
 	types := anOrderedCollection.
 	self setParents: self types to: self
@@ -74,14 +84,14 @@ JavaCatchParameterNode >> types: anOrderedCollection [
 
 { #category : #generated }
 JavaCatchParameterNode >> variable [
+
 	^ variable
 ]
 
 { #category : #generated }
 JavaCatchParameterNode >> variable: aJavaProgramNode [
-	self variable notNil
-		ifTrue: [ self variable parent: nil ].
+
+	self variable notNil ifTrue: [ self variable parent: nil ].
 	variable := aJavaProgramNode.
-	self variable notNil
-		ifTrue: [ self variable parent: self ]
+	self variable notNil ifTrue: [ self variable parent: self ]
 ]

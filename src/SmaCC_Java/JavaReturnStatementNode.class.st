@@ -11,54 +11,62 @@ Class {
 
 { #category : #generated }
 JavaReturnStatementNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitReturnStatement: self
 ]
 
 { #category : #generated }
 JavaReturnStatementNode >> expression [
+
 	^ expression
 ]
 
 { #category : #generated }
 JavaReturnStatementNode >> expression: aJavaExpressionNode [
-	self expression notNil
-		ifTrue: [ self expression parent: nil ].
+
+	self expression notNil ifTrue: [ self expression parent: nil ].
 	expression := aJavaExpressionNode.
-	self expression notNil
-		ifTrue: [ self expression parent: self ]
+	self expression notNil ifTrue: [ self expression parent: self ]
 ]
 
 { #category : #generated }
 JavaReturnStatementNode >> ignoredTokenVariables [
-	^ #(#semicolon)
+
+	^ #( #semicolon )
 ]
 
 { #category : #generated }
 JavaReturnStatementNode >> nodeVariables [
-	^ #(#expression)
+
+	^ #( #expression )
 ]
 
 { #category : #generated }
 JavaReturnStatementNode >> returnToken [
+
 	^ returnToken
 ]
 
 { #category : #generated }
 JavaReturnStatementNode >> returnToken: aSmaCCToken [
+
 	returnToken := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaReturnStatementNode >> semicolon [
+
 	^ semicolon
 ]
 
 { #category : #generated }
 JavaReturnStatementNode >> semicolon: aSmaCCToken [
+
 	semicolon := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaReturnStatementNode >> tokenVariables [
-	^ #(#returnToken)
+
+	^ #( #returnToken )
 ]

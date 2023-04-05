@@ -11,16 +11,19 @@ Class {
 
 { #category : #generated }
 JavaThrowsNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitThrows: self
 ]
 
 { #category : #generated }
 JavaThrowsNode >> classTypes [
+
 	^ classTypes
 ]
 
 { #category : #generated }
 JavaThrowsNode >> classTypes: anOrderedCollection [
+
 	self setParents: self classTypes to: nil.
 	classTypes := anOrderedCollection.
 	self setParents: self classTypes to: self
@@ -28,22 +31,26 @@ JavaThrowsNode >> classTypes: anOrderedCollection [
 
 { #category : #generated }
 JavaThrowsNode >> commas [
+
 	^ commas
 ]
 
 { #category : #generated }
 JavaThrowsNode >> commas: anOrderedCollection [
+
 	commas := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaThrowsNode >> compositeNodeVariables [
-	^ #(#classTypes)
+
+	^ #( #classTypes )
 ]
 
 { #category : #generated }
 JavaThrowsNode >> ignoredCompositeTokenVariables [
-	^ #(#commas)
+
+	^ #( #commas )
 ]
 
 { #category : #'generated-initialize-release' }
@@ -55,15 +62,18 @@ JavaThrowsNode >> initialize [
 
 { #category : #generated }
 JavaThrowsNode >> throwsToken [
+
 	^ throwsToken
 ]
 
 { #category : #generated }
 JavaThrowsNode >> throwsToken: aSmaCCToken [
+
 	throwsToken := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaThrowsNode >> tokenVariables [
-	^ #(#throwsToken)
+
+	^ #( #throwsToken )
 ]

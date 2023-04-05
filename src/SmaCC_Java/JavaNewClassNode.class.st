@@ -11,21 +11,25 @@ Class {
 
 { #category : #generated }
 JavaNewClassNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitNewClass: self
 ]
 
 { #category : #generated }
 JavaNewClassNode >> compositeNodeVariables [
-	^ #(#declarations #expressions #arguments)
+
+	^ #( #declarations #expressions #arguments )
 ]
 
 { #category : #generated }
 JavaNewClassNode >> declarations [
+
 	^ declarations
 ]
 
 { #category : #generated }
 JavaNewClassNode >> declarations: anOrderedCollection [
+
 	self setParents: self declarations to: nil.
 	declarations := anOrderedCollection.
 	self setParents: self declarations to: self
@@ -33,7 +37,8 @@ JavaNewClassNode >> declarations: anOrderedCollection [
 
 { #category : #generated }
 JavaNewClassNode >> ignoredTokenVariables [
-	^ #(#leftBrace #rightBrace #leftParen #rightParen #lt #gt)
+
+	^ #( #leftBrace #rightBrace #leftParen #rightParen #lt #gt )
 ]
 
 { #category : #'generated-initialize-release' }
@@ -44,20 +49,24 @@ JavaNewClassNode >> initialize [
 
 { #category : #generated }
 JavaNewClassNode >> leftBrace [
+
 	^ leftBrace
 ]
 
 { #category : #generated }
 JavaNewClassNode >> leftBrace: aSmaCCToken [
+
 	leftBrace := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaNewClassNode >> rightBrace [
+
 	^ rightBrace
 ]
 
 { #category : #generated }
 JavaNewClassNode >> rightBrace: aSmaCCToken [
+
 	rightBrace := aSmaCCToken
 ]

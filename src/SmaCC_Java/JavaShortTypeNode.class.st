@@ -6,5 +6,6 @@ Class {
 
 { #category : #generated }
 JavaShortTypeNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitShortType: self
 ]

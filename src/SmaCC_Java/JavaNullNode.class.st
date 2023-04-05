@@ -6,5 +6,6 @@ Class {
 
 { #category : #generated }
 JavaNullNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitNull: self
 ]

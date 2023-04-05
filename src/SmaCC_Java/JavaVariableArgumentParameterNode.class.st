@@ -9,20 +9,24 @@ Class {
 
 { #category : #generated }
 JavaVariableArgumentParameterNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitVariableArgumentParameter: self
 ]
 
 { #category : #generated }
 JavaVariableArgumentParameterNode >> tokenVariables [
-	^ #(#varArgsToken)
+
+	^ #( #varArgsToken )
 ]
 
 { #category : #generated }
 JavaVariableArgumentParameterNode >> varArgsToken [
+
 	^ varArgsToken
 ]
 
 { #category : #generated }
 JavaVariableArgumentParameterNode >> varArgsToken: aSmaCCToken [
+
 	varArgsToken := aSmaCCToken
 ]

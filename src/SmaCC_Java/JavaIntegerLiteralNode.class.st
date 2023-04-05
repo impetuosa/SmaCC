@@ -6,5 +6,6 @@ Class {
 
 { #category : #generated }
 JavaIntegerLiteralNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitIntegerLiteral: self
 ]

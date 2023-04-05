@@ -10,32 +10,38 @@ Class {
 
 { #category : #generated }
 JavaExpressionNode >> _leftParens [
+
 	^ _leftParens
 ]
 
 { #category : #generated }
 JavaExpressionNode >> _leftParens: anOrderedCollection [
+
 	_leftParens := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaExpressionNode >> _rightParens [
+
 	^ _rightParens
 ]
 
 { #category : #generated }
 JavaExpressionNode >> _rightParens: anOrderedCollection [
+
 	_rightParens := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaExpressionNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitExpression: self
 ]
 
 { #category : #generated }
 JavaExpressionNode >> ignoredCompositeTokenVariables [
-	^ #(#_leftParens #_rightParens)
+
+	^ #( #_leftParens #_rightParens )
 ]
 
 { #category : #'generated-initialize-release' }

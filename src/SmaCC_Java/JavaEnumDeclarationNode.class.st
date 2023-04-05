@@ -19,31 +19,37 @@ Class {
 
 { #category : #generated }
 JavaEnumDeclarationNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitEnumDeclaration: self
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> commas [
+
 	^ commas
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> commas: anOrderedCollection [
+
 	commas := anOrderedCollection
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> compositeNodeVariables [
-	^ #(#declarations #constants #interfaces #modifiers)
+
+	^ #( #declarations #constants #interfaces #modifiers )
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> constants [
+
 	^ constants
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> constants: anOrderedCollection [
+
 	self setParents: self constants to: nil.
 	constants := anOrderedCollection.
 	self setParents: self constants to: self
@@ -51,11 +57,13 @@ JavaEnumDeclarationNode >> constants: anOrderedCollection [
 
 { #category : #generated }
 JavaEnumDeclarationNode >> declarations [
+
 	^ declarations
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> declarations: anOrderedCollection [
+
 	self setParents: self declarations to: nil.
 	declarations := anOrderedCollection.
 	self setParents: self declarations to: self
@@ -63,31 +71,37 @@ JavaEnumDeclarationNode >> declarations: anOrderedCollection [
 
 { #category : #generated }
 JavaEnumDeclarationNode >> enumToken [
+
 	^ enumToken
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> enumToken: aSmaCCToken [
+
 	enumToken := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> ignoredCompositeTokenVariables [
-	^ #(#commas)
+
+	^ #( #commas )
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> ignoredTokenVariables [
-	^ #(#leftBrace #rightBrace #semicolon)
+
+	^ #( #leftBrace #rightBrace #semicolon )
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> implementsToken [
+
 	^ implementsToken
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> implementsToken: aSmaCCToken [
+
 	implementsToken := aSmaCCToken
 ]
 
@@ -103,11 +117,13 @@ JavaEnumDeclarationNode >> initialize [
 
 { #category : #generated }
 JavaEnumDeclarationNode >> interfaces [
+
 	^ interfaces
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> interfaces: anOrderedCollection [
+
 	self setParents: self interfaces to: nil.
 	interfaces := anOrderedCollection.
 	self setParents: self interfaces to: self
@@ -115,21 +131,25 @@ JavaEnumDeclarationNode >> interfaces: anOrderedCollection [
 
 { #category : #generated }
 JavaEnumDeclarationNode >> leftBrace [
+
 	^ leftBrace
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> leftBrace: aSmaCCToken [
+
 	leftBrace := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> modifiers [
+
 	^ modifiers
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> modifiers: anOrderedCollection [
+
 	self setParents: self modifiers to: nil.
 	modifiers := anOrderedCollection.
 	self setParents: self modifiers to: self
@@ -137,35 +157,42 @@ JavaEnumDeclarationNode >> modifiers: anOrderedCollection [
 
 { #category : #generated }
 JavaEnumDeclarationNode >> name [
+
 	^ name
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> name: aSmaCCToken [
+
 	name := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> rightBrace [
+
 	^ rightBrace
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> rightBrace: aSmaCCToken [
+
 	rightBrace := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> semicolon [
+
 	^ semicolon
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> semicolon: aSmaCCToken [
+
 	semicolon := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaEnumDeclarationNode >> tokenVariables [
-	^ #(#enumToken #name #implementsToken)
+
+	^ #( #enumToken #name #implementsToken )
 ]

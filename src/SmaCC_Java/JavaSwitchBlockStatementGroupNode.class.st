@@ -10,12 +10,14 @@ Class {
 
 { #category : #generated }
 JavaSwitchBlockStatementGroupNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitSwitchBlockStatementGroup: self
 ]
 
 { #category : #generated }
 JavaSwitchBlockStatementGroupNode >> compositeNodeVariables [
-	^ #(#labels #statements)
+
+	^ #( #labels #statements )
 ]
 
 { #category : #'generated-initialize-release' }
@@ -27,11 +29,13 @@ JavaSwitchBlockStatementGroupNode >> initialize [
 
 { #category : #generated }
 JavaSwitchBlockStatementGroupNode >> labels [
+
 	^ labels
 ]
 
 { #category : #generated }
 JavaSwitchBlockStatementGroupNode >> labels: anOrderedCollection [
+
 	self setParents: self labels to: nil.
 	labels := anOrderedCollection.
 	self setParents: self labels to: self
@@ -39,11 +43,13 @@ JavaSwitchBlockStatementGroupNode >> labels: anOrderedCollection [
 
 { #category : #generated }
 JavaSwitchBlockStatementGroupNode >> statements [
+
 	^ statements
 ]
 
 { #category : #generated }
 JavaSwitchBlockStatementGroupNode >> statements: anOrderedCollection [
+
 	self setParents: self statements to: nil.
 	statements := anOrderedCollection.
 	self setParents: self statements to: self

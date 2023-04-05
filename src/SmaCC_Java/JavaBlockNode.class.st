@@ -11,17 +11,20 @@ Class {
 
 { #category : #generated }
 JavaBlockNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitBlock: self
 ]
 
 { #category : #generated }
 JavaBlockNode >> compositeNodeVariables [
-	^ #(#statements)
+
+	^ #( #statements )
 ]
 
 { #category : #generated }
 JavaBlockNode >> ignoredTokenVariables [
-	^ #(#leftBrace #rightBrace)
+
+	^ #( #leftBrace #rightBrace )
 ]
 
 { #category : #'generated-initialize-release' }
@@ -32,31 +35,37 @@ JavaBlockNode >> initialize [
 
 { #category : #generated }
 JavaBlockNode >> leftBrace [
+
 	^ leftBrace
 ]
 
 { #category : #generated }
 JavaBlockNode >> leftBrace: aSmaCCToken [
+
 	leftBrace := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaBlockNode >> rightBrace [
+
 	^ rightBrace
 ]
 
 { #category : #generated }
 JavaBlockNode >> rightBrace: aSmaCCToken [
+
 	rightBrace := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaBlockNode >> statements [
+
 	^ statements
 ]
 
 { #category : #generated }
 JavaBlockNode >> statements: anOrderedCollection [
+
 	self setParents: self statements to: nil.
 	statements := anOrderedCollection.
 	self setParents: self statements to: self

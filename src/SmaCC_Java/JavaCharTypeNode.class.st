@@ -6,5 +6,6 @@ Class {
 
 { #category : #generated }
 JavaCharTypeNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitCharType: self
 ]

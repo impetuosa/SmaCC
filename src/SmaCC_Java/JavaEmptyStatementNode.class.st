@@ -9,20 +9,24 @@ Class {
 
 { #category : #generated }
 JavaEmptyStatementNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitEmptyStatement: self
 ]
 
 { #category : #generated }
 JavaEmptyStatementNode >> ignoredTokenVariables [
-	^ #(#semicolon)
+
+	^ #( #semicolon )
 ]
 
 { #category : #generated }
 JavaEmptyStatementNode >> semicolon [
+
 	^ semicolon
 ]
 
 { #category : #generated }
 JavaEmptyStatementNode >> semicolon: aSmaCCToken [
+
 	semicolon := aSmaCCToken
 ]

@@ -15,31 +15,37 @@ Class {
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> acceptVisitor: aProgramVisitor [
+
 	^ aProgramVisitor visitAnnotationInterface: self
 ]
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> atToken [
+
 	^ atToken
 ]
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> atToken: aSmaCCToken [
+
 	atToken := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> compositeNodeVariables [
-	^ #(#declarations #modifiers)
+
+	^ #( #declarations #modifiers )
 ]
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> declarations [
+
 	^ declarations
 ]
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> declarations: anOrderedCollection [
+
 	self setParents: self declarations to: nil.
 	declarations := anOrderedCollection.
 	self setParents: self declarations to: self
@@ -47,7 +53,8 @@ JavaAnnotationInterfaceNode >> declarations: anOrderedCollection [
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> ignoredTokenVariables [
-	^ #(#leftBrace #rightBrace)
+
+	^ #( #leftBrace #rightBrace )
 ]
 
 { #category : #'generated-initialize-release' }
@@ -59,31 +66,37 @@ JavaAnnotationInterfaceNode >> initialize [
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> interfaceToken [
+
 	^ interfaceToken
 ]
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> interfaceToken: aSmaCCToken [
+
 	interfaceToken := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> leftBrace [
+
 	^ leftBrace
 ]
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> leftBrace: aSmaCCToken [
+
 	leftBrace := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> modifiers [
+
 	^ modifiers
 ]
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> modifiers: anOrderedCollection [
+
 	self setParents: self modifiers to: nil.
 	modifiers := anOrderedCollection.
 	self setParents: self modifiers to: self
@@ -91,25 +104,38 @@ JavaAnnotationInterfaceNode >> modifiers: anOrderedCollection [
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> name [
+
 	^ name
 ]
 
 { #category : #generated }
-JavaAnnotationInterfaceNode >> name: aSmaCCToken [
-	name := aSmaCCToken
+JavaAnnotationInterfaceNode >> name: aJavaClassTypeNode [
+
+	self name notNil ifTrue: [ self name parent: nil ].
+	name := aJavaClassTypeNode.
+	self name notNil ifTrue: [ self name parent: self ]
+]
+
+{ #category : #generated }
+JavaAnnotationInterfaceNode >> nodeVariables [
+
+	^ #( #name )
 ]
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> rightBrace [
+
 	^ rightBrace
 ]
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> rightBrace: aSmaCCToken [
+
 	rightBrace := aSmaCCToken
 ]
 
 { #category : #generated }
 JavaAnnotationInterfaceNode >> tokenVariables [
-	^ #(#atToken #interfaceToken #name)
+
+	^ #( #atToken #interfaceToken )
 ]
