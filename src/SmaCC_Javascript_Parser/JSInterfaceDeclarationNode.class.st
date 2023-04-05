@@ -23,10 +23,11 @@ JSInterfaceDeclarationNode >> extends [
 ]
 
 { #category : #generated }
-JSInterfaceDeclarationNode >> extends: aJSTypeReferenceNode [
-	self extends notNil ifTrue: [ self extends parent: nil ].
-	extends := aJSTypeReferenceNode.
-	self extends notNil ifTrue: [ self extends parent: self ]
+JSInterfaceDeclarationNode >> extends: anOrderedCollection [
+
+	self setParent: self extends to: nil.
+	extends := anOrderedCollection.
+	self setParent: self extends to: self
 ]
 
 { #category : #generated }
@@ -63,7 +64,14 @@ JSInterfaceDeclarationNode >> name: aJSNameExpressionNode [
 
 { #category : #generated }
 JSInterfaceDeclarationNode >> nodeVariables [
-	^ #(#name #type #extends #typeParameters)
+
+	^ #( #name #type #typeParameters )
+]
+
+{ #category : #generated }
+JSInterfaceDeclarationNode >> otherVariables [
+
+	^ #( #extends )
 ]
 
 { #category : #generated }
